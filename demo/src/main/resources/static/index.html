@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>E-Commerce Demo</title>
+    <style>body{font-family:Arial,Helvetica,sans-serif;padding:2rem}</style>
+  </head>
+  <body>
+    <h1>E-Commerce Demo</h1>
+    <p>This is a public index page for the demo application.</p>
+    <ul>
+      <li><strong>Register</strong> POST <code>/api/auth/register</code></li>
+      <li><strong>Login</strong> POST <code>/api/auth/login</code></li>
+      <li><strong>Public test</strong> GET <a href="/api/test/public">/api/test/public</a></li>
+      <li><strong>Protected test</strong> GET <code>/api/test/protected</code> (requires Bearer token)</li>
+    </ul>
+
+    <h3>Quick test (fetch /api/test/public)</h3>
+    <pre id="out">waiting...</pre>
+
+    <script>
+      fetch('/api/test/public')
+        .then(r => r.text())
+        .then(t => document.getElementById('out').textContent = t)
+        .catch(e => document.getElementById('out').textContent = 'error: '+e);
+    </script>
+  </body>
+</html>

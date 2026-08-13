@@ -1,0 +1,14 @@
+# React
+frontend/node_modules/
+frontend/dist/
+
+# Spring Boot
+demo/target/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
