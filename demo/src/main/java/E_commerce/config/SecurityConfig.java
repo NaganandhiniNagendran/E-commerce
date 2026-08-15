@@ -72,8 +72,9 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        // Allow local dev origins and expose Authorization header
-        config.addAllowedOriginPattern("*");
+        // Allow specific frontend origins
+        config.addAllowedOrigin("https://e-commerce-red-alpha-28.vercel.app");
+        config.addAllowedOrigin("http://localhost:5173");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.setAllowCredentials(true);
