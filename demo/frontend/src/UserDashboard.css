@@ -1,0 +1,113 @@
+/* Styles for UserDashboard (matches provided design) */
+
+.ud-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f6f8fb 0%, #f0f4fb 100%);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+/* Top nav */
+.ud-topnav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 28px;
+  background: #fff;
+  border-bottom: 1px solid #eef2f7;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.ud-brand { display: flex; align-items: center; gap: 12px; }
+.ud-brand-icon { font-size: 22px; display:inline-block }
+.ud-brand-name { font-weight:700; color:#111827 }
+
+.ud-hamburger { width:44px; height:36px; border-radius:10px; background:transparent; border:0; display:flex; flex-direction:column; justify-content:center; gap:4px }
+.ud-hamburger span{display:block;height:3px;background:#d1d5db;border-radius:2px}
+
+.ud-search-wrap { flex:1; display:flex; gap:8px; align-items:center }
+.ud-search { flex:1; padding:10px 14px; border-radius:12px; border:1px solid #e6eef8; background:#f7fafc }
+.ud-search-btn { border-radius:10px; padding:9px 10px; border:0; background:#eef2ff }
+
+.ud-nav-right{ display:flex; align-items:center; gap:12px }
+.ud-icon-btn{ position:relative; border:0; background:transparent; padding:8px; border-radius:10px }
+.ud-bell-badge{ position:absolute; top:6px; right:6px; background:#ef4444; color:#fff; font-size:11px; padding:2px 6px; border-radius:999px }
+
+.ud-user-chip{ display:flex; align-items:center; gap:8px; background:#fff; padding:8px 10px; border-radius:14px; border:1px solid #eef2f7 }
+.ud-avatar{ width:36px; height:36px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(135deg,#8b5cf6,#6366f1); color:#fff; font-weight:700 }
+
+/* Layout */
+.ud-body{ display:flex; gap:18px; padding:20px 28px }
+.ud-sidebar{ width:260px; background:#fff; border-radius:16px; padding:18px; box-shadow:0 12px 30px rgba(15,23,42,0.04); border:1px solid #eef2f7 }
+.ud-navigation-body{ align-items:flex-start }
+.ud-navigation-body .ud-sidebar{ flex:0 0 260px; position:sticky; top:20px }
+.ud-navigation-content{ min-width:0 }
+
+.ud-nav{ display:flex; flex-direction:column; gap:6px }
+.ud-nav-item{ display:flex; align-items:center; gap:10px; padding:12px; border-radius:12px; background:transparent; border:0; text-align:left; font-weight:600; color:#374151 }
+.ud-nav-active{ background:linear-gradient(90deg,#f3f4ff,#fff); box-shadow: 0 8px 18px rgba(79,70,229,0.06) }
+.ud-nav-icon{ width:28px; text-align:center }
+.ud-nav-badge{ margin-left:auto; background:#6366f1; color:#fff; font-size:12px; padding:5px 8px; border-radius:999px }
+
+.ud-logout-btn{ margin-top:14px; display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; background:#fff; border:1px solid #f1f5f9 }
+
+.ud-main{ flex:1; display:flex; flex-direction:column; gap:18px }
+.ud-welcome h1{ margin:0; font-size:1.8rem }
+.ud-welcome p{ margin:6px 0 0; color:#6b7280 }
+
+/* Stats grid */
+.ud-stats-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:16px }
+.ud-stat-card{ display:flex; justify-content:space-between; align-items:center; padding:18px; border-radius:14px; background:#fff; border:1px solid #eef2f7 }
+.ud-stat-label{ color:#6b7280; font-weight:700; font-size:0.86rem }
+.ud-stat-value{ font-size:1.8rem }
+.ud-stat-sub{ color:#9ca3af; font-size:0.84rem }
+.ud-stat-icon-wrap{ width:52px; height:52px; border-radius:12px; display:grid; place-items:center }
+
+/* Middle grid */
+.ud-mid-grid{ display:grid; grid-template-columns: 1.35fr 0.85fr; gap:18px }
+.ud-panel{ background:#fff; border-radius:14px; padding:14px; border:1px solid #eef2f7 }
+.ud-panel-header{ display:flex; align-items:center; justify-content:space-between; margin-bottom:8px }
+.ud-orders-list{ display:flex; flex-direction:column; gap:10px }
+.ud-order-row{ display:flex; align-items:center; gap:12px; padding:10px; border-radius:10px }
+.ud-order-img{ width:56px; height:56px; border-radius:8px; object-fit:cover }
+.ud-order-info strong{ display:block }
+.ud-order-info span{ display:block; color:#6b7280; font-size:0.86rem }
+.ud-order-right{ margin-left:auto; text-align:right }
+.ud-status{ display:inline-block; padding:6px 10px; border-radius:999px; font-weight:700 }
+.ud-status--delivered{ background:rgba(16,185,129,0.12); color:#10b981 }
+.ud-status--shipped{ background:rgba(59,130,246,0.12); color:#2563eb }
+.ud-status--processing{ background:rgba(245,158,11,0.12); color:#b45309 }
+.ud-order-price{ display:block; margin-top:6px; font-weight:700 }
+
+/* Wishlist */
+.ud-wishlist-list{ display:flex; flex-direction:column; gap:10px }
+.ud-wishlist-row{ display:flex; align-items:center; gap:12px; padding:10px; border-bottom:1px solid #f3f4f6 }
+.ud-wish-img{ width:56px; height:56px; object-fit:cover; border-radius:8px }
+.ud-wish-actions{ margin-left:auto; display:flex; gap:8px; align-items:center }
+.ud-add-cart-btn{ padding:8px 12px; border-radius:10px; border:1px solid #6366f1; background:transparent; color:#6366f1; font-weight:700 }
+.ud-add-cart-btn.ud-added{ background:#6366f1; color:#fff; border:1px solid transparent }
+.ud-heart-btn{ border:0; background:transparent }
+
+.ud-view-link{ background:transparent; border:0; color:#4f46e5; font-weight:700 }
+
+/* Bottom grid */
+.ud-bottom-grid{ display:grid; grid-template-columns: 1.35fr 0.65fr; gap:18px }
+.ud-promo-banner{ display:flex; gap:18px; align-items:center; padding:20px; border-radius:14px; background:linear-gradient(90deg,#6d5ef7,#8b5cf6); color:#fff }
+.ud-promo-eyebrow{ font-weight:700; text-transform:uppercase; font-size:0.78rem }
+.ud-promo-code{ background:rgba(255,255,255,0.12); padding:8px 12px; border-radius:10px; margin-left:8px }
+.ud-shop-now-btn{ margin-top:8px; padding:10px 12px; border-radius:12px; border:0; background:#fff; color:#6d5ef7; font-weight:800 }
+
+.ud-recommended-panel .ud-rec-grid{ display:flex; gap:12px; align-items:center }
+.ud-rec-card{ background:#fff; border-radius:12px; padding:10px; width:88px; text-align:center }
+.ud-rec-img{ width:80px; height:80px; object-fit:cover; border-radius:10px }
+.ud-rec-price{ display:block; margin-top:8px; font-weight:700 }
+
+/* responsive */
+@media (max-width: 980px){
+  .ud-stats-grid{ grid-template-columns:repeat(2,1fr) }
+  .ud-mid-grid{ grid-template-columns:1fr }
+  .ud-bottom-grid{ grid-template-columns:1fr }
+  .ud-body{ padding:16px }
+  .ud-sidebar{ display:none }
+}
